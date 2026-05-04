@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
- 
 :root {
-
     --base-color: #1c1c1e;
     --surface-1: #242426;
     --surface-2: #2b2b2d;
@@ -13,45 +10,8 @@
     --border-color: #3a3a3c;
     --primary-color: #d4a857;
     --secondary-color: #b08740;
-    --color-1: var(--surface-1);
-    --color-2: var(--surface-2);
-    --color-3: var(--surface-3);
-}
-/* Der Container für das Dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
 }
 
-/* Das Menü (deine Speisen), standardmäßig unsichtbar */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--surface-3);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  border: 1px solid var(--border-color);
-}
-
-.dropdown-content a {
-  color: var(--text-color);
-}
-
-/* Zeige Menü beim Hovern über das 'li' Element */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Optik für die Überschrift */
-.dropbtn {
-  text-decoration: none;
-  color: var(--text-color);
-  cursor: pointer;
-}
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +19,7 @@
 }
 
 html {
-    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
 }
 
@@ -70,9 +30,10 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: Merriweather, Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    font-family: Merriweather, Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Fixed top navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -97,8 +58,12 @@ nav ul {
 
 nav li:first-child {
     margin-right: auto;
-    font-family: Merriweather, Poppins;
+    font-family: Merriweather, Inter;
     font-weight: bold;
+}
+
+nav li:first-child a {
+    color: var(--primary-color);
 }
 
 nav a {
@@ -110,10 +75,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Page sections */
 header, section {
     margin: 2em auto;
     width: min(75em, 100%);
-    background-color: var(--color-1);
+    background-color: var(--surface-1);
     padding: min(2em, 15%);
     border-radius: 1em;
 }
@@ -146,6 +112,7 @@ h1 {
     font-size: 1.25rem;
 }
 
+/* Buttons */
 .cta-button {
     display: inline-block;
     text-decoration: none;
@@ -173,7 +140,7 @@ h1 {
 
 section {
     padding: 3em min(2em, 15%);
-    background-color: var(--color-2);
+    background-color: var(--surface-2);
     text-align: center;
 }
 
@@ -186,35 +153,7 @@ section p {
     font-size: 1.35rem;
 }
 
-section#Speisekarte {
-    background-color: var(--color-3);
-}
-
-
-.grid-container {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "img-1 img-1 img-2 img-3"
-    "img-1 img-1 img-4, img-5";
-    gap: 1em;
-}
-
-.grid-container img {
-    height: 100%;
-    width: 100%;
-    border-radius: .5em;
-    transition: 100ms ease;
-}
-
-.grid-container img:hover {
-    scale: 1.05;
-}
-
+/* Details (collapsible menu items) */
 details {
     margin-top: 1em;
     background-color: var(--surface-2);
@@ -225,13 +164,15 @@ details {
 details summary {
     padding: 1em;
     font-size: 1.7rem;
-    font-family: Merriweather, Inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Merriweather, Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
 }
 
 details p {
     padding: 0 2em 2em 2em;
 }
 
+/* Forms */
 input,
 button {
     font-family: inherit;
@@ -274,6 +215,7 @@ button:hover {
     background-color: #e6bb6a;
 }
 
+/* Footer */
 footer {
     padding-bottom: 1.5em;
     text-align: center;
@@ -289,6 +231,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Responsive */
 @media(max-width: 988px) {
     header {
         text-align: center;
@@ -304,7 +247,7 @@ footer a:hover {
         display: none;
     }
 
-    nav li-first-child,
+    nav li:first-child,
     nav li:last-child {
         display: block;
     }
@@ -316,11 +259,6 @@ footer a:hover {
     .cta-button {
         margin-top: .5em;
         width: 100%;
-    }
-
-    .grit-container {
-        display: flex;
-        flex-direction: column;
     }
 
     .text-container p {

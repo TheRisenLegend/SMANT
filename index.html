@@ -1,79 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMANT Restaurant</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">SMANT Restaurant</a></li>
+            <li><a href="pages/Speisekarte.html">Speisekarte</a></li>
+            <li><a href="pages/UeberUns.html">Über uns</a></li>
+            <li><a href="pages/Kontakt.html">Kontakt</a></li>
+            <li><a href="pages/Reservierung.html">Reservierung</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="index.html">SMANT Restaurant</a>
-                </li>
-                <li class="dropdown">
-                    <a href="pages/Speisekarte.html" class="dropbtn">Speisekarte</a>
-                    <div class="dropdown-content">
-                        <a href="pages/Speisekarte.html#Speisekarte">Speisekarte</a>
-                        <a href="pages/Speisekarte.html#Vorspeisen">Vorspeisen</a> <br>
-                        <a href="pages/Speisekarte.html#Pizza">Hauptspeisen</a> <br>
-                        <a href="pages/Speisekarte.html#Nachtisch">Nachtisch</a> <br>
-                        <a href="pages/Speisekarte.html#Getränke">Getränke</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#Kontakt">Kontakt</a>
-                </li> 
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-            </ul>
-        </nav>
         <div class="flex-container">
-            <img height="200px" width="150px" src="assets/Logo_bg_white.jpeg" alt="SMANT Restaurant Gericht">
+            <img height="200px" width="150px" src="assets/Logo_bg_white.jpeg" alt="SMANT Restaurant Logo">
             <div class="text-container">
                 <h1>Herzlich Willkommen!</h1>
                 <p>Uns gibt es schon seit <strong>2003</strong>.</p>
                 <a href="pages/Reservierung.html" class="cta-button secondary">Hier reservieren</a>
             </div>
-    </div>
-    </header> 
-    <section>
-        <div class="flex-container">
-            <div class="text-container">
-                <h2>Unsere Geschichte</h2>
-                <p>Der Name SMANT besteht aus den Anfangsbuchstaben der Gründer dieses Restaurants: Sansal Ilgaz, Michaela Sommerfeld, Agnesa Krasniqi, Nadia Sokoujou und Thi Tra Mi Vu</p>
-            </div>
         </div>
-    </section>
+    </header>
+
     <section id="Speisekarte">
         <h2>Beliebte Gerichte</h2>
         <div class="grid-container">
-            <img height= "300px" width="300px" src="assets/noodles_pesto.jpg">
-            <img height= "200px" width="100px" src="assets/pizza_lasagna.jpg">
-            <img height= "200px" width="100px" src="assets/pizza_tonno.jpg">
-            <img height= "200px" width="100px" src="assets/tomato_mozarella.jpg">
+            <img src="assets/noodles_pesto.jpg" alt="Pasta mit Pesto">
+            <img src="assets/pizza_lasagna.jpg" alt="Pizza und Lasagne">
+            <img src="assets/pizza_tonno.jpg" alt="Pizza Tonno">
+            <img src="assets/tomato_mozarella.jpg" alt="Tomate-Mozzarella">
         </div>
-        <a href="" class="cta-button">Mehr auf unseren Sozialen Netzwerken</a>
+        <a href="pages/Speisekarte.html" class="cta-button">Zur Speisekarte</a>
     </section>
-
-    
-
-    <section id="Kontakt">
-        <h2>Kontakt</h2>
-        <p>Telefon: +49 123 456789</p>
-        <p>E-Mail: info@smant-restaurant.de</p>
-        <p>Adresse: Musterstraße 123, 12345 Musterstadt</p>
-        <p>Öffnungszeiten: Mo-Fr 11:00-22:00, Sa-So 12:00-23:00</p>
-    </section>
-
-    <footer>
-        <a href="#Kontakt">Kontakt</a>
-        <a href="#Speisekarte">Speisekarte</a>
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
-    </footer>
 </body>
 </html>
