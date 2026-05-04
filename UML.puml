@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+actor "Besucher" as User
+actor "Admin" as Admin
+
+rectangle "SMANT-Restaurant Website" {
+
+  User --> (Startseite ansehen)
+  User --> (Speisekarte ansehen)
+  User --> (Reservierung durchführen)
+  User --> (Bilder ansehen)
+
+  (Startseite ansehen) --> (Navigation nutzen)
+  (Speisekarte ansehen) --> (Gerichte durchsuchen)
+  (Reservierung durchführen) --> (Formular ausfüllen)
+
+  Admin --> (Website pflegen)
+  Admin --> (Bilder aktualisieren)
+  Admin --> (Speisekarte aktualisieren)
+}
+
+@enduml
