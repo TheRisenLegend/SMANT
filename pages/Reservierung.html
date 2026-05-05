@@ -21,7 +21,7 @@
         <h2>Reservierung</h2>
         <p>Reservieren Sie hier Ihren Tisch:</p>
 
-        <form action="/reservierung-senden" method="POST">
+        <form action="mailto:info@smant-restaurant.de" method="POST" enctype="text/plain">
             <label for="name">Name der Reservierung:</label>
             <input type="text" id="name" name="name" placeholder="z. B. Max Mustermann" required> <br>
 
@@ -32,14 +32,28 @@
             <input type="date" id="date" name="date" required> <br>
 
             <label for="time">Uhrzeit:</label>
-            <input type="time" id="time" name="time" min="11:00" max="22:30" step="900" required> <br>
+            <input type="time" id="time" name="time" min="11:00" max="22:00" step="900" required> <br>
 
             <p style="font-size: 0.85em; color: var(--text-muted);">
-                Öffnungszeiten: Mo-Fr 11:00-22:00, Sa-So 12:00-23:00
+                Öffnungszeiten: Mo-Fr 11:00-22:00, Sa-So 12:00-23:00 <br>
+                (Warme Küche schließt eine Stunde vor Schließung, Reservierungen nur bis dahin möglich)
             </p>
 
             <button type="submit">Tisch reservieren</button>
         </form>
+        <script>
+            document.getElementById('date').addEventListener('change', function() {
+                const date = new Date(this.value);
+                const day = date.getDay();
+                const timeInput = document.getElementById('time');
+                // 0 is Sunday, 6 is Saturday
+                if (day === 0 || day === 6) {
+                    timeInput.max = "22:00";
+                } else {
+                    timeInput.max = "21:00";
+                }
+            });
+        </script>
     </section>
 
     <footer>
