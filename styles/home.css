@@ -1,31 +1,156 @@
-/* Inspirations-Grid auf der Startseite */
-.grid-container {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "img-1 img-1 img-2 img-3"
-        "img-1 img-1 img-4 img-5";
+/* Hero mit Foodbild im Hintergrund */
+.hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(20, 20, 22, 0.55), rgba(20, 20, 22, 0.85)),
+                      url('../assets/spaghetti_carbonara.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    padding-block: 6em;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 42em;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-size: .8rem;
+    margin-bottom: 1.5em;
+    font-family: Inter, sans-serif;
+}
+
+.hero h1 {
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.1;
+    margin-bottom: .6em;
+}
+
+.hero-tagline {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 2em;
+    line-height: 1.6;
+    opacity: .9;
+}
+
+.hero-actions {
+    display: flex;
     gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.grid-container img {
-    height: 100%;
+/* Welcome / About-Teaser */
+.welcome p {
+    max-width: 42em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Beliebte Gerichte als Karten */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25em;
+    margin: 3em auto 2.5em auto;
+    max-width: 70em;
+    text-align: left;
+}
+
+.popular-card {
+    display: block;
+    background-color: var(--surface-2);
+    border: 1px solid var(--border-color);
+    border-radius: .6em;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+    transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.popular-card img {
     width: 100%;
-    border-radius: .5em;
-    transition: 100ms ease;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
 }
 
-.grid-container img:hover {
-    scale: 1.05;
+.popular-card-info {
+    padding: 1em 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .5em;
 }
 
-@media(max-width: 640px) {
-    .grid-container {
-        display: flex;
-        flex-direction: column;
+.popular-name {
+    font-weight: 600;
+    font-family: Merriweather, Inter, serif;
+    font-size: 1rem;
+}
+
+.popular-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: .95rem;
+    white-space: nowrap;
+}
+
+/* Besuchen Sie uns: drei Spalten */
+.visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5em;
+    margin-top: 3em;
+    text-align: left;
+}
+
+.visit-card h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: .8rem;
+    margin-bottom: 1em;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+}
+
+.visit-card p {
+    margin: 0 0 .9em 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.visit-card strong {
+    color: var(--text-color);
+    display: block;
+    font-size: 1.1rem;
+    margin-top: .15em;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding-block: 4em;
+    }
+
+    .hero-actions .cta-button {
+        width: 100%;
     }
 }

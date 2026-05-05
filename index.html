@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMANT Restaurant</title>
+    <title>SMANT Restaurant &ndash; Italienische Küche in Augsburg</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/home.css">
 </head>
@@ -18,37 +18,79 @@
         </ul>
     </nav>
 
-    <header>
-        <div class="flex-container">
-            <img height="200px" width="150px" src="assets/Logo_bg_white.jpeg" alt="SMANT Restaurant Logo">
-            <div class="text-container">
-                <h1>Herzlich Willkommen!</h1>
-                <p>Uns gibt es schon seit <strong>2003</strong>.</p>
-                <a href="pages/Reservierung.html" class="cta-button secondary">Hier reservieren</a>
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Augsburg &middot; seit 2003</span>
+            <h1>Italienisch, mit Liebe gemacht.</h1>
+            <p class="hero-tagline">Klassische Vorspeisen, aus dem Steinofen gebackene Pizza und hausgemachte Pasta &mdash; von Familie für Familie.</p>
+            <div class="hero-actions">
+                <a href="pages/Reservierung.html" class="cta-button">Tisch reservieren</a>
+                <a href="pages/Speisekarte.html" class="cta-button secondary">Speisekarte ansehen</a>
             </div>
         </div>
     </header>
 
-    <section id="Speisekarte">
+    <section class="welcome">
+        <h2>Italienisch aus Leidenschaft</h2>
+        <p>Seit 2003 servieren wir mitten in Augsburg klassische italienische Küche &mdash; mit Zutaten von kleinen Erzeugern, im Steinofen gebacken und mit der Hand gemacht. Hinter SMANT stehen fünf Gründerinnen und ein Gründer, die ihre Liebe zur italienischen Tradition in jeden Teller stecken.</p>
+        <a href="pages/UeberUns.html">Mehr über uns erfahren</a>
+    </section>
+
+    <section id="popular">
         <h2>Beliebte Gerichte</h2>
-        <div class="grid-container">
-            <img src="assets/noodles_pesto.jpg" alt="Pasta mit Pesto">
-            <img src="assets/pizza_lasagna.jpg" alt="Pizza und Lasagne">
-            <img src="assets/pizza_tonno.jpg" alt="Pizza Tonno">
-            <img src="assets/tomato_mozarella.jpg" alt="Tomate-Mozzarella">
+        <p>Ein kleiner Vorgeschmack auf unsere Speisekarte.</p>
+        <div class="popular-grid">
+            <a href="pages/Speisekarte.html#Vorspeisen" class="popular-card">
+                <img src="assets/bruschetta.jpg" alt="Bruschetta Classica">
+                <div class="popular-card-info">
+                    <span class="popular-name">Bruschetta Classica</span>
+                    <span class="popular-price">6,50 &euro;</span>
+                </div>
+            </a>
+            <a href="pages/Speisekarte.html#Hauptspeisen" class="popular-card">
+                <img src="assets/pizza_margherita.jpg" alt="Pizza Margherita">
+                <div class="popular-card-info">
+                    <span class="popular-name">Pizza Margherita</span>
+                    <span class="popular-price">8,50 &euro;</span>
+                </div>
+            </a>
+            <a href="pages/Speisekarte.html#Hauptspeisen" class="popular-card">
+                <img src="assets/lasagna.jpg" alt="Lasagna Classica">
+                <div class="popular-card-info">
+                    <span class="popular-name">Lasagna Classica</span>
+                    <span class="popular-price">12,00 &euro;</span>
+                </div>
+            </a>
+            <a href="pages/Speisekarte.html#Nachspeisen" class="popular-card">
+                <img src="assets/tiramisu.jpg" alt="Tiramisu">
+                <div class="popular-card-info">
+                    <span class="popular-name">Tiramisu</span>
+                    <span class="popular-price">6,00 &euro;</span>
+                </div>
+            </a>
         </div>
         <a href="pages/Speisekarte.html" class="cta-button">Zur Speisekarte</a>
     </section>
 
-    <section id="Besuch">
+    <section class="visit">
         <h2>Besuchen Sie uns</h2>
-        <p><strong>Öffnungszeiten</strong><br>
-           Mo &ndash; Fr: 11:00 &ndash; 22:00<br>
-           Sa &ndash; So: 12:00 &ndash; 23:00</p>
-        <p><strong>Standort</strong><br>
-           Hallstraße, 86150 Augsburg</p>
-        <p><strong>Telefon</strong><br>
-           +49 123 456789</p>
+        <div class="visit-grid">
+            <div class="visit-card">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag &ndash; Freitag<strong>11:00 &ndash; 22:00</strong></p>
+                <p>Samstag &ndash; Sonntag<strong>12:00 &ndash; 23:00</strong></p>
+            </div>
+            <div class="visit-card">
+                <h3>Standort</h3>
+                <p>Hallstraße<br>86150 Augsburg</p>
+                <p><a href="https://www.google.com/maps/search/Hallstra%C3%9Fe+Augsburg" target="_blank" rel="noopener">Auf Karte zeigen</a></p>
+            </div>
+            <div class="visit-card">
+                <h3>Reservierung</h3>
+                <p>Telefonisch<strong>+49 123 456789</strong></p>
+                <p>oder über das <a href="pages/Reservierung.html">Online-Formular</a>.</p>
+            </div>
+        </div>
     </section>
 
     <footer>
