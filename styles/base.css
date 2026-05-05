@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+/* ==========================================================================
+   1. VARIABLES & RESET
+   ========================================================================== */
 :root {
     --base-color: #1c1c1e;
     --surface-1: #242426;
@@ -20,6 +23,9 @@
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   2. GLOBAL TYPOGRAPHY & BODY
+   ========================================================================== */
 html {
     font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
@@ -31,7 +37,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 0;
-    padding-top: 4.5em;
+    padding-top: 4.5em; /* Space for fixed navbar */
     background-color: var(--surface-1);
 }
 
@@ -44,7 +50,97 @@ h1 { font-size: clamp(2rem, 4vw, 3rem); }
 h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
 h3 { font-size: 1.2rem; }
 
-/* Fixed top navbar */
+/* Inline links inside content */
+section a:not(.cta-button):not(.button) {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 150ms ease;
+}
+
+section a:not(.cta-button):not(.button):hover {
+    color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   3. LAYOUT CONTAINERS
+   ========================================================================== */
+header,
+section,
+footer {
+    width: 100%;
+    padding: 4em max(1.5em, calc((100% - var(--content-max)) / 2));
+}
+
+header {
+    background-color: var(--surface-1);
+}
+
+section {
+    background-color: var(--surface-1);
+    text-align: center;
+}
+
+section + section,
+header + section {
+    border-top: 1px solid var(--border-color);
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+section h2 + p {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+.text-container p {
+    margin: .75em 0 1.25em 0;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* Legal pages: long-form text reads better left-aligned and narrower */
+.legal {
+    text-align: left;
+    padding-inline: max(1.5em, calc((100% - 55em) / 2));
+}
+
+.legal h3 {
+    margin-top: 1.75em;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    letter-spacing: .02em;
+}
+
+.legal p {
+    margin-top: .75em;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-color);
+}
+
+/* ==========================================================================
+   4. COMPONENTS
+   ========================================================================== */
+
+/* --- Navbar --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -118,79 +214,7 @@ nav a[aria-current="page"]::after {
     border-radius: 1px;
 }
 
-/* Full-width section blocks with content centered up to --content-max */
-header,
-section,
-footer {
-    width: 100%;
-    padding: 4em max(1.5em, calc((100% - var(--content-max)) / 2));
-}
-
-header {
-    background-color: var(--surface-1);
-}
-
-section {
-    background-color: var(--surface-1);
-    text-align: center;
-}
-
-section + section,
-header + section {
-    border-top: 1px solid var(--border-color);
-}
-
-section p {
-    margin-top: 1em;
-    font-size: 1.1rem;
-    color: var(--text-muted);
-}
-
-section h2 + p {
-    max-width: 50em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Hero / header content */
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 3em;
-}
-
-header img {
-    max-width: 100%;
-    border-radius: 1em;
-    object-fit: cover;
-    object-position: bottom;
-}
-
-.text-container {
-    flex: 0 1 34em;
-}
-
-.text-container p {
-    margin: .75em 0 1.25em 0;
-    font-size: 1.2rem;
-    color: var(--text-muted);
-}
-
-/* Inline links inside content (not nav/footer) get gold accent without underline */
-section a:not(.cta-button):not(.button) {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 150ms ease;
-}
-
-section a:not(.cta-button):not(.button):hover {
-    color: var(--primary-hover);
-}
-
-/* Buttons */
+/* --- Buttons --- */
 .cta-button {
     display: inline-block;
     text-decoration: none;
@@ -220,7 +244,7 @@ section a:not(.cta-button):not(.button):hover {
     color: #1c1c1e;
 }
 
-/* Forms */
+/* --- Forms --- */
 input,
 button {
     font-family: inherit;
@@ -266,7 +290,14 @@ button:hover {
     transform: translateY(-1px);
 }
 
-/* Footer (sticks to bottom on short pages via body flex) */
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* --- Footer --- */
 footer {
     margin-top: auto;
     background-color: #1a1a1c;
@@ -338,27 +369,9 @@ footer {
     color: var(--primary-color);
 }
 
-/* Legal pages: long-form text reads better left-aligned and narrower */
-.legal {
-    text-align: left;
-    padding-inline: max(1.5em, calc((100% - 55em) / 2));
-}
-
-.legal h3 {
-    margin-top: 1.75em;
-    color: var(--primary-color);
-    font-size: 1.15rem;
-    letter-spacing: .02em;
-}
-
-.legal p {
-    margin-top: .75em;
-    font-size: 1rem;
-    line-height: 1.65;
-    color: var(--text-color);
-}
-
-/* Responsive */
+/* ==========================================================================
+   5. MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 768px) {
     header, section, footer {
         padding-block: 3em;
