@@ -55,6 +55,22 @@ h3 { font-size: 1.2rem; }
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: .9em max(1.5em, calc((100% - var(--content-max)) / 2));
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    z-index: 10;
+}
+
+.nav-logo img {
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -65,6 +81,7 @@ nav ul {
     flex-wrap: wrap;
     list-style-type: none;
     gap: 2em;
+    width: 100%;
 }
 
 nav li:first-child {
