@@ -1,0 +1,95 @@
+/* Layout für die Speisekarten-Kategorien */
+.menu-row {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+    margin-top: 1.5em;
+    text-align: left;
+}
+
+.menu-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: .5em;
+    flex-shrink: 0;
+}
+
+.dish-list {
+    list-style: none;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.dish-list li {
+    padding: 1em 0;
+    border-bottom: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+    row-gap: .25em;
+    align-items: baseline;
+}
+
+.dish-list li:last-child {
+    border-bottom: none;
+}
+
+.dish-name {
+    font-weight: 600;
+}
+
+.dish-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dish-desc {
+    grid-column: 1 / -1;
+    color: var(--text-muted);
+    font-size: .95em;
+    margin: 0;
+}
+
+.dish-allergens {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* Allergie-Legende */
+.allergen-legend {
+    background-color: var(--surface-3);
+    border: 1px solid var(--border-color);
+    border-radius: .5em;
+    padding: 1em 1.5em;
+    margin-top: 1.5em;
+    text-align: left;
+    font-size: .95rem;
+}
+
+.allergen-legend ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: .25em 1em;
+    margin-top: .5em;
+    padding: 0;
+}
+
+.allergen-legend strong {
+    color: var(--primary-color);
+    margin-right: .5em;
+}
+
+@media (max-width: 640px) {
+    .menu-row {
+        flex-direction: column;
+    }
+
+    .menu-image {
+        width: 100%;
+        height: 200px;
+    }
+}

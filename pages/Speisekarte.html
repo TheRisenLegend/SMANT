@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speisekarte &ndash; SMANT Restaurant</title>
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/menu.css">
 </head>
 <body>
     <nav class="navbar">
@@ -19,43 +20,113 @@
 
     <section>
         <h2>Unsere Speisekarte</h2>
+        <p>Bei Allergien oder Unverträglichkeiten sprechen Sie uns gerne an.</p>
 
-        <details id="Vorspeisen">
-            <summary>Vorspeisen</summary>
-            <p>Bruschetta Classica (Röstbrot mit Tomaten &amp; Basilikum)     6,50 &euro; <br>
-            Caprese di Bufala (Büffelmozzarella mit Tomaten)             9,50 &euro; <br>
-            Carpaccio di Manzo (Hauchdünnes Rinderfilet mit Rucola)     12,50 &euro;</p>
-        </details>
+        <div class="allergen-legend">
+            <strong>Allergie-Hinweise</strong>
+            <ul>
+                <li><strong>A</strong> Glutenhaltiges Getreide</li>
+                <li><strong>C</strong> Eier</li>
+                <li><strong>D</strong> Fisch</li>
+                <li><strong>F</strong> Sojabohnen</li>
+                <li><strong>G</strong> Milch / Laktose</li>
+                <li><strong>H</strong> Schalenfrüchte</li>
+                <li><strong>M</strong> Senf</li>
+                <li><strong>O</strong> Sulfite</li>
+            </ul>
+        </div>
+    </section>
 
-        <details id="Pizza">
-            <summary>Pizza</summary>
-            <p>Pizza Margherita (Tomaten, Mozzarella, Basilikum)          8,50 &euro; <br>
-            Pizza Diavola (Scharfe Salami &amp; Peperoni)                   10,50 &euro; <br>
-            Pizza Parma (Rucola, Parmaschinken &amp; Parmesan)              12,50 &euro;</p>
-        </details>
+    <section id="Vorspeisen">
+        <h2>Vorspeisen</h2>
+        <div class="menu-row">
+            <img class="menu-image" src="../assets/tomato_mozarella.jpg" alt="Vorspeisen">
+            <ul class="dish-list">
+                <li>
+                    <span class="dish-name">Bruschetta Classica</span>
+                    <span class="dish-price">6,50 &euro;</span>
+                    <p class="dish-desc">Röstbrot mit Tomaten &amp; Basilikum <span class="dish-allergens">(A)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Caprese di Bufala</span>
+                    <span class="dish-price">9,50 &euro;</span>
+                    <p class="dish-desc">Büffelmozzarella mit Tomaten <span class="dish-allergens">(G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Carpaccio di Manzo</span>
+                    <span class="dish-price">12,50 &euro;</span>
+                    <p class="dish-desc">Hauchdünnes Rinderfilet mit Rucola und Parmesan <span class="dish-allergens">(G, M)</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <details id="Pasta">
-            <summary>Pasta &amp; Risotto</summary>
-            <p>Spaghetti alla Carbonara (Original mit Guanciale &amp; Ei)    11,00 &euro; <br>
-            Penne all'Arrabbiata (Scharfe Tomatensauce &amp; Knoblauch)      9,00 &euro; <br>
-            Lasagna Classica (Hausgemacht aus dem Ofen)                 12,00 &euro; <br>
-            Risotto ai Funghi (Cremiger Reis mit Steinpilzen)           13,50 &euro;</p>
-        </details>
+    <section id="Hauptspeisen">
+        <h2>Hauptspeisen</h2>
+        <div class="menu-row">
+            <img class="menu-image" src="../assets/pizza_lasagna.jpg" alt="Hauptspeisen">
+            <ul class="dish-list">
+                <li>
+                    <span class="dish-name">Pizza Margherita</span>
+                    <span class="dish-price">8,50 &euro;</span>
+                    <p class="dish-desc">Tomaten, Mozzarella, Basilikum <span class="dish-allergens">(A, G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Pizza Diavola</span>
+                    <span class="dish-price">10,50 &euro;</span>
+                    <p class="dish-desc">Scharfe Salami &amp; Peperoni <span class="dish-allergens">(A, G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Pizza Parma</span>
+                    <span class="dish-price">12,50 &euro;</span>
+                    <p class="dish-desc">Rucola, Parmaschinken &amp; Parmesan <span class="dish-allergens">(A, G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Spaghetti alla Carbonara</span>
+                    <span class="dish-price">11,00 &euro;</span>
+                    <p class="dish-desc">Original mit Guanciale &amp; Ei <span class="dish-allergens">(A, C, G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Penne all'Arrabbiata</span>
+                    <span class="dish-price">9,00 &euro;</span>
+                    <p class="dish-desc">Scharfe Tomatensauce &amp; Knoblauch <span class="dish-allergens">(A)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Lasagna Classica</span>
+                    <span class="dish-price">12,00 &euro;</span>
+                    <p class="dish-desc">Hausgemacht aus dem Ofen <span class="dish-allergens">(A, C, G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Risotto ai Funghi</span>
+                    <span class="dish-price">13,50 &euro;</span>
+                    <p class="dish-desc">Cremiger Reis mit Steinpilzen <span class="dish-allergens">(G)</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <details id="Nachtisch">
-            <summary>Nachtisch</summary>
-            <p>Tiramisu                                                   6,00 &euro; <br>
-            Panna Cotta                                                  5,50 &euro; <br>
-            Gelato Misto                                                 5,00 &euro;</p>
-        </details>
-
-        <details id="Getraenke">
-            <summary>Getränke</summary>
-            <p>Wasser                                                     1,00 &euro; <br>
-            Espresso                                                     2,50 &euro; <br>
-            Cappuccino                                                   3,80 &euro; <br>
-            Limonade                                                     4,00 &euro;</p>
-        </details>
+    <section id="Nachspeisen">
+        <h2>Nachspeisen</h2>
+        <div class="menu-row">
+            <img class="menu-image" src="../assets/noodles_pesto.jpg" alt="Nachspeisen">
+            <ul class="dish-list">
+                <li>
+                    <span class="dish-name">Tiramisu</span>
+                    <span class="dish-price">6,00 &euro;</span>
+                    <p class="dish-desc">Klassisches italienisches Dessert <span class="dish-allergens">(A, C, G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Panna Cotta</span>
+                    <span class="dish-price">5,50 &euro;</span>
+                    <p class="dish-desc">Mit Beerensauce <span class="dish-allergens">(G)</span></p>
+                </li>
+                <li>
+                    <span class="dish-name">Gelato Misto</span>
+                    <span class="dish-price">5,00 &euro;</span>
+                    <p class="dish-desc">Drei Kugeln nach Wahl <span class="dish-allergens">(G)</span></p>
+                </li>
+            </ul>
+        </div>
     </section>
 </body>
 </html>
