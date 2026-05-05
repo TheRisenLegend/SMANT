@@ -1,63 +1,3 @@
-/* Layout für die Speisekarten-Kategorien */
-.menu-row {
-    display: flex;
-    gap: 2em;
-    align-items: flex-start;
-    margin-top: 1.5em;
-    text-align: left;
-}
-
-.menu-image {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: .5em;
-    flex-shrink: 0;
-}
-
-.dish-list {
-    list-style: none;
-    flex: 1;
-    padding: 0;
-    margin: 0;
-}
-
-.dish-list li {
-    padding: 1em 0;
-    border-bottom: 1px solid var(--border-color);
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 1em;
-    row-gap: .25em;
-    align-items: baseline;
-}
-
-.dish-list li:last-child {
-    border-bottom: none;
-}
-
-.dish-name {
-    font-weight: 600;
-}
-
-.dish-price {
-    color: var(--primary-color);
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.dish-desc {
-    grid-column: 1 / -1;
-    color: var(--text-muted);
-    font-size: .95em;
-    margin: 0;
-}
-
-.dish-allergens {
-    font-style: italic;
-    color: var(--text-muted);
-}
-
 /* Allergie-Legende */
 .allergen-legend {
     background-color: var(--surface-3);
@@ -83,13 +23,83 @@
     margin-right: .5em;
 }
 
-@media (max-width: 640px) {
-    .menu-row {
+/* Speise-Karten */
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.25em;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.dish {
+    display: flex;
+    gap: 1em;
+    background-color: var(--surface-3);
+    border: 1px solid var(--border-color);
+    border-radius: .6em;
+    padding: 1em;
+    transition: transform 150ms ease, border-color 150ms ease;
+}
+
+.dish:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+}
+
+.dish img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: .4em;
+    flex-shrink: 0;
+}
+
+.dish-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .35em;
+    min-width: 0;
+}
+
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .5em;
+}
+
+.dish-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.dish-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dish-desc {
+    color: var(--text-muted);
+    font-size: .95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.dish-allergens {
+    font-style: italic;
+}
+
+@media (max-width: 520px) {
+    .dish {
         flex-direction: column;
     }
 
-    .menu-image {
+    .dish img {
         width: 100%;
-        height: 200px;
+        height: 180px;
     }
 }
