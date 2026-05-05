@@ -217,17 +217,44 @@ button:hover {
 
 /* Footer */
 footer {
-    padding-bottom: 1.5em;
-    text-align: center;
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--surface-1);
+    border-radius: 1em;
+    padding: 2em min(2em, 15%);
+    color: var(--text-muted);
 }
 
-footer a {
-    margin: 0 1em;
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+}
+
+.footer-grid h3 {
+    color: var(--primary-color);
+    margin-bottom: .75em;
+    font-size: 1rem;
+    font-family: Inter, sans-serif;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.footer-grid p {
+    margin: .25em 0;
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+.footer-grid a {
+    display: block;
+    margin: .25em 0;
+    color: var(--text-muted);
     text-decoration: none;
-    color: var(--text-color);
 }
 
-footer a:hover {
+.footer-grid a:hover {
+    color: var(--text-color);
     text-decoration: underline;
 }
 
