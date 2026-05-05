@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservierung &ndash; SMANT Restaurant</title>
+    <title>Impressum &ndash; SMANT Restaurant</title>
     <link rel="stylesheet" href="../styles/base.css">
 </head>
 <body>
@@ -17,29 +17,31 @@
         </ul>
     </nav>
 
-    <section>
-        <h2>Reservierung</h2>
-        <p>Reservieren Sie hier Ihren Tisch:</p>
+    <section class="legal">
+        <h2>Impressum</h2>
 
-        <form action="/reservierung-senden" method="POST">
-            <label for="name">Name der Reservierung:</label>
-            <input type="text" id="name" name="name" placeholder="z. B. Max Mustermann" required> <br>
+        <h3>Anbieter</h3>
+        <p>SMANT Restaurant GbR<br>
+           Hallstraße<br>
+           86150 Augsburg</p>
 
-            <label for="guests">Personen (bis max. 5 Personen):</label>
-            <input type="number" id="guests" name="guests" min="1" max="5" required> <br>
+        <h3>Kontakt</h3>
+        <p>Telefon: +49 123 456789<br>
+           E-Mail: info@smant-restaurant.de</p>
 
-            <label for="date">Datum:</label>
-            <input type="date" id="date" name="date" required> <br>
+        <h3>Vertreten durch</h3>
+        <p>Sansal Ilgaz, Michaela Sommerfeld, Agnesa Krasniqi, Nadia Sokoujou, Thi Tra Mi Vu</p>
 
-            <label for="time">Uhrzeit:</label>
-            <input type="time" id="time" name="time" min="11:00" max="22:30" step="900" required> <br>
+        <h3>Verantwortlich für den Inhalt nach &sect; 55 Abs. 2 RStV</h3>
+        <p>Sansal Ilgaz<br>
+           Hallstraße, 86150 Augsburg</p>
 
-            <p style="font-size: 0.85em; color: var(--text-muted);">
-                Öffnungszeiten: Mo-Fr 11:00-22:00, Sa-So 12:00-23:00
-            </p>
+        <h3>Haftungsausschluss</h3>
+        <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        <p>Als Diensteanbieter sind wir gemäß &sect; 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
 
-            <button type="submit">Tisch reservieren</button>
-        </form>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</p>
     </section>
 
     <footer>
