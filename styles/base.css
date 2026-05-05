@@ -62,6 +62,7 @@ nav ul {
     margin: 0;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     list-style-type: none;
     gap: 2em;
 }
@@ -353,15 +354,6 @@ footer {
 }
 
 @media (max-width: 640px) {
-    nav li {
-        display: none;
-    }
-
-    nav li:first-child,
-    nav li:last-child {
-        display: block;
-    }
-
     .cta-button {
         margin-top: .5em;
         width: 100%;
