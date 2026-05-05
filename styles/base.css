@@ -176,11 +176,19 @@ nav ul {
 }
 
 nav li:first-child {
-    margin-right: auto;
     font-family: Merriweather, Inter, sans-serif;
     font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: .02em;
+}
+
+.nav-notice {
+    margin: 0 auto;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    pointer-events: none;
 }
 
 nav li:first-child a {
@@ -389,6 +397,9 @@ footer {
         display: flex;
         justify-content: center;
         margin-bottom: 0.5em;
+    }
+    .nav-notice {
+        display: none;
     }
 }
 
